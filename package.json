@@ -1,0 +1,30 @@
+{
+  "name": "smartmavuno-backend",
+  "version": "1.0.0",
+  "description": "SmartMavuno Backend API using Node.js, Express, and PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "smartmavuno",
+    "backend",
+    "nodejs",
+    "express",
+    "postgresql"
+  ],
+  "author": "Nelson Tommogo",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1"
+  }
+}
