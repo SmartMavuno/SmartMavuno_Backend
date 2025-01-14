@@ -1,18 +1,20 @@
-const express = require('express');
-require('dotenv').config();
-const pool = require('./config/db'); // Adjust the path if necessary
+import express, { json } from 'express';
+import dotenv from 'dotenv'; // Change to import
+import pool from './src/config/db.js';
+
+dotenv.config(); // Call dotenv.config() after importing
 
 const app = express();
 const port = 3000;
 
 // Middleware to parse JSON requests
-app.use(express.json());
+app.use(json());
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
     res.send('Backend is running!');
 });
 
-app.get('/db-test', async (req, res) => {
+app.get('/db-test', async (_req, res) => {
     try {
         const result = await pool.query('SELECT 1 AS success');
         res.status(200).json({
